@@ -88,8 +88,9 @@ void MyRvizPanel::callService()
                            "Service responded:",
                            QString::fromStdString(srv_.response.return_message),
                            QMessageBox::Icon::Information);
-}
+
 */
+}
 
 void MyRvizPanel::load(const rviz::Config& config)
 {
