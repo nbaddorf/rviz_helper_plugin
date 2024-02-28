@@ -29,8 +29,6 @@ MyRvizPanel::MyRvizPanel(QWidget* parent) :
   
   connect(this, &MyRvizPanel::enable, this, &MyRvizPanel::setEnabled);
   Q_EMIT enable(true);
-  
-
 
   setObjectName("MyRvizPanel");
   setName(objectName());
@@ -45,11 +43,15 @@ MyRvizPanel::MyRvizPanel(QWidget* parent) :
   //layout->addWidget(value_);
   //layout->addStretch();
   layout->addWidget(button_);
+
+  stop_nav_pub_ = nh_.advertise<actionlib_msgs::GoalID>( "/move_base/cancel", 1 );
   //layout->addStretch();
 
   //connect(value_, qOverload<int>(&QSpinBox::valueChanged), this, &MyRvizPanel::configChanged);
   connect(button_, &QPushButton::released, this, [=]
     {
+      actionlib_msgs::GoalID goal;
+      stop_nav_pub_.pub(goal);
       //srv_.request.value = value_->value();
       //QtConcurrent::run(this, &MyRvizPanel::callService);
     }
@@ -61,6 +63,10 @@ MyRvizPanel::MyRvizPanel(QWidget* parent) :
 
 MyRvizPanel::~MyRvizPanel()
 {
+}
+
+void MyRvizPanel::stopNav() {
+
 }
 
 void MyRvizPanel::callService()

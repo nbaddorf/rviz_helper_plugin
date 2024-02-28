@@ -10,6 +10,7 @@
 #include <QVBoxLayout>
 #include <ros/ros.h>
 #include <ros/service.h>
+#include <actionlib_msgs/GoalID.h>
 #include <rviz/panel.h>
 
 namespace rviz_helper_plugin
@@ -33,11 +34,14 @@ Q_SIGNALS:
 protected Q_SLOTS:
   virtual void load(const rviz::Config &config);
   virtual void save(rviz::Config config) const;
+  // The ROS publisher for the command velocity.
+  ros::Publisher stop_nav_pub_;
 
 private:
   void connectToService(ros::ServiceClient &client);
   void connectToServices();
   virtual void callService();
+  void stopNav();
 
   //QSpinBox *value_;
   QPushButton* button_;
