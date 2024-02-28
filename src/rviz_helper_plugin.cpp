@@ -14,7 +14,7 @@ MyRvizPanel::MyRvizPanel(QWidget* parent) :
     const QMessageBox::Icon icon)
   {
     const bool old_state(isEnabled());
-    setEnabled(false);
+    setEnabled(true);
     QMessageBox msg_box;
     msg_box.setWindowTitle(title);
     msg_box.setText(text);
