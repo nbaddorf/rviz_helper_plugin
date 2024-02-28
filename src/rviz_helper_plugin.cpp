@@ -37,9 +37,9 @@ MyRvizPanel::MyRvizPanel(QWidget* parent) :
   setLayout(layout);
 
   //value_ = new QSpinBox;
-  button_ = new QPushButton("Click me!");
+  button_ = new QPushButton("STOP NAV");
 
-  layout->addWidget(new QLabel("button:"));
+  //layout->addWidget(new QLabel("button:"));
   //layout->addWidget(value_);
   //layout->addStretch();
   layout->addWidget(button_);
