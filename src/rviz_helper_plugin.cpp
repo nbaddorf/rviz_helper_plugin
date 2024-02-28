@@ -105,7 +105,7 @@ void MyRvizPanel::callService()
 void MyRvizPanel::load(const rviz::Config& config)
 {
   rviz::Panel::load(config);
-  int tmp_int;
+  //int tmp_int;
 
   //if (config.mapGetInt("value", &tmp_int))
   //  value_->setValue(tmp_int);
