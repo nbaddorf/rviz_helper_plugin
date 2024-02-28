@@ -35,7 +35,7 @@ protected Q_SLOTS:
   virtual void load(const rviz::Config &config);
   virtual void save(rviz::Config config) const;
   // The ROS publisher for the command velocity.
-  ros::Publisher stop_nav_pub_;
+  
 
 private:
   void connectToService(ros::ServiceClient &client);
@@ -46,8 +46,11 @@ private:
   //QSpinBox *value_;
   QPushButton* button_;
 
+  
+
   ros::NodeHandle nh_;
   ros::ServiceClient service_;
+  ros::Publisher stop_nav_pub_;
   //simple_node::GetMessage srv_;
 };
 
