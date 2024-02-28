@@ -1,4 +1,4 @@
-#include <rviz_helper_plugin/rviz_helper_panel.hpp>
+#include <include/rviz_helper_plugin/rviz_helper_panel.hpp>
 
 namespace rviz_helper
 
