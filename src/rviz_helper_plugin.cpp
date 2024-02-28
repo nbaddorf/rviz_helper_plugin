@@ -6,7 +6,7 @@ namespace rviz_helper_plugin
 MyRvizPanel::MyRvizPanel(QWidget* parent) :
         rviz::Panel(parent)
 {
-  
+  /*
   qRegisterMetaType<QMessageBox::Icon>();
   connect(this, &MyRvizPanel::displayMessageBox, this, [=]
     (const QString title,
@@ -25,10 +25,10 @@ MyRvizPanel::MyRvizPanel(QWidget* parent) :
     msg_box.exec();
     setEnabled(true);
   });
-  
+  */
   
   connect(this, &MyRvizPanel::enable, this, &MyRvizPanel::setEnabled);
-  Q_EMIT enable(false);
+  Q_EMIT enable(true);
   
 
 
@@ -65,7 +65,7 @@ MyRvizPanel::~MyRvizPanel()
 
 void MyRvizPanel::callService()
 {
-  Q_EMIT enable(false);
+  //Q_EMIT enable(false);
 
   //const bool rvalue (service_.call(srv_));
   Q_EMIT enable(true);
