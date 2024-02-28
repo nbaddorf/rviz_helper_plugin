@@ -26,10 +26,10 @@ MyRvizPanel::MyRvizPanel(QWidget* parent) :
     setEnabled(old_state);
   });
   
-
+  */
   connect(this, &MyRvizPanel::enable, this, &MyRvizPanel::setEnabled);
   Q_EMIT enable(false);
-  */
+
 
   setObjectName("MyRvizPanel");
   setName(objectName());
@@ -44,7 +44,7 @@ MyRvizPanel::MyRvizPanel(QWidget* parent) :
   //layout->addWidget(value_);
   //layout->addStretch();
   layout->addWidget(button_);
-  layout->addStretch();
+  //layout->addStretch();
 
   //connect(value_, qOverload<int>(&QSpinBox::valueChanged), this, &MyRvizPanel::configChanged);
   connect(button_, &QPushButton::released, this, [=]
@@ -106,7 +106,7 @@ void MyRvizPanel::load(const rviz::Config& config)
 
 void MyRvizPanel::save(rviz::Config config) const
                  {
-  //rviz::Panel::save(config);
+  rviz::Panel::save(config);
   //config.mapSetValue("value", value_->value());
 }
 
