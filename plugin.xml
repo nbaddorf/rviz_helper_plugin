@@ -1,0 +1,11 @@
+
+<?xml version="1.0"?>
+<library path="lib/librviz_helper_plugin">
+  <class name="rviz_helper_plugin/MyRvizPanel"
+         type="rviz_helper_plugin::MyRvizPanel"
+         base_class_type="rviz::Panel">
+    <description>
+      A simple RViz panel
+    </description>
+  </class>
+</library>
