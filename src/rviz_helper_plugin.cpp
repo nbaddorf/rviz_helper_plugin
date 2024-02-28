@@ -63,9 +63,10 @@ void MyRvizPanel::callService()
 {
   Q_EMIT enable(false);
 
-  const bool rvalue (service_.call(srv_));
+  //const bool rvalue (service_.call(srv_));
   Q_EMIT enable(true);
 
+  /*
   if (!rvalue)
   {
     Q_EMIT displayMessageBox("Failure",
@@ -88,6 +89,7 @@ void MyRvizPanel::callService()
                            QString::fromStdString(srv_.response.return_message),
                            QMessageBox::Icon::Information);
 }
+*/
 
 void MyRvizPanel::load(const rviz::Config& config)
 {
