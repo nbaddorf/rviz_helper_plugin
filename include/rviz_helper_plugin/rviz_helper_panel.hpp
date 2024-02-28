@@ -44,7 +44,7 @@ private:
 
   ros::NodeHandle nh_;
   ros::ServiceClient service_;
-  simple_node::GetMessage srv_;
+  //simple_node::GetMessage srv_;
 };
 
 }
