@@ -51,7 +51,7 @@ MyRvizPanel::MyRvizPanel(QWidget* parent) :
   connect(button_, &QPushButton::released, this, [=]
     {
       actionlib_msgs::GoalID goal;
-      stop_nav_pub_.pub(goal);
+      stop_nav_pub_.publish(goal);
       //srv_.request.value = value_->value();
       //QtConcurrent::run(this, &MyRvizPanel::callService);
     }
