@@ -1,6 +1,6 @@
 #include <rviz_helper_plugin/rviz_helper_panel.hpp>
 
-namespace rviz_helper
+namespace rviz_helper_plugin
 
 {
 MyRvizPanel::MyRvizPanel(QWidget* parent) :

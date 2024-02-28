@@ -12,7 +12,7 @@
 #include <ros/service.h>
 #include <rviz/panel.h>
 
-namespace rviz_helper_panel
+namespace rviz_helper_plugin
 {
 
 class MyRvizPanel : public rviz::Panel
